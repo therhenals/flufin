@@ -1,0 +1,19 @@
+{
+    "upload": {
+        "type": "json",
+        "files": "lib/i18n/strings.i18n.json"
+    },
+    "download": {
+        "files": [
+            {
+                "output": "lib/i18n/strings.i18n.json",
+                "conditions": "equals: ${lang}, en"
+            },
+            {
+                "output": "lib/i18n/strings_${lang}.i18n.json",
+                "conditions": "!equals: ${lang}, en"
+            }
+        ],
+        "includeSourceLang": true
+    }
+}

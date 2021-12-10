@@ -1,0 +1,15 @@
+export 'package:flufin/screens/app_information/app_information_screen.dart';
+export 'package:flufin/screens/collection/collection_screen.dart';
+export 'package:flufin/screens/details/details_screen.dart';
+export 'package:flufin/screens/episode/episode_screen.dart';
+export 'package:flufin/screens/favorites/favorites_screen.dart';
+export 'package:flufin/screens/home/home_screen.dart';
+export 'package:flufin/screens/library/library_screen.dart';
+export 'package:flufin/screens/login/login_screen.dart';
+export 'package:flufin/screens/player/player_screen.dart';
+export 'package:flufin/screens/search/search_delegate.dart';
+export 'package:flufin/screens/season/season_screen.dart';
+export 'package:flufin/screens/server/server_screen.dart';
+export 'package:flufin/screens/settings/settings_screen.dart';
+export 'package:flufin/screens/splash/splash_screen.dart';
+export 'package:flufin/screens/tabs/tabs_screen.dart';
