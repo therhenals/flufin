@@ -1,16 +1,19 @@
-# flufin
+# Flufin
 
-A new Flutter project.
+Flufin is a third-party Flutter application for Jellyfin
 
-## Getting Started
+This project is in beta phase, and it is possible that there are many bugs, I work on it in my spare time.
 
-This project is a starting point for a Flutter application.
+[![google-play](https://jellyfin.org/images/store-icons/google-play.png)](https://play.google.com/store/apps/details?id=com.therhenals.flufin)
 
-A few resources to get you started if this is your first Flutter project:
+## Planned features
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- Chromecast
+- Syncplay
+- iOS Release
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Support Development
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/therhenals)
+
+[![buymeacoffee](https://img.buymeacoffee.com/button-api/?slug=therhenals&button_colour=FFDD00&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/therhenals)
