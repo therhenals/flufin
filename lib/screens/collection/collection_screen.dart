@@ -37,12 +37,11 @@ class CollectionScreen extends StatelessWidget {
                   height: 300,
                   width: 200,
                   onTap: () async {
-                    if (item.type == 'Movie') {
-                      Navigator.pushNamed(context, 'details');
-                    } else if (item.type == 'Series') {
+                    jellyfin.getItemDetails(item.id, item.type);
+                    if (item.type == 'Series') {
                       jellyfin.getSeasons(item.id);
-                      Navigator.pushNamed(context, 'details');
                     }
+                    Navigator.pushNamed(context, 'details');
                   },
                 );
               },
