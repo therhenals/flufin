@@ -36,7 +36,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   animate_do: ^2.0.0
-  better_player: ^0.0.79
+  better_player: ^0.0.81
   card_swiper: ^1.0.4
   cupertino_icons: ^1.0.2
   device_info_plus: ^3.1.1
