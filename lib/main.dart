@@ -1,4 +1,5 @@
-import 'package:flufin/ui/theme.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
@@ -7,10 +8,18 @@ import 'package:flufin/i18n/strings.g.dart';
 import 'package:flufin/providers/providers.dart';
 import 'package:flufin/screens/screens.dart';
 import 'package:flufin/services/services.dart';
+import 'package:flufin/ui/theme.dart';
 
-void main() {
-  WidgetsFlutterBinding.ensureInitialized(); // add this
-  LocaleSettings.useDeviceLocale(); // and this
+import 'firebase_options.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  LocaleSettings.useDeviceLocale();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  // Pass all uncaught errors from the framework to Crashlytics.
+  FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
   runApp(
     TranslationProvider(
       child: const AppState(),

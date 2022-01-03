@@ -1,3 +1,4 @@
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flufin/services/image_service.dart';
 import 'package:flutter/material.dart';
 
@@ -115,6 +116,7 @@ class JellyfinService extends ChangeNotifier {
     } catch (e, s) {
       print(e);
       print(s);
+      FirebaseCrashlytics.instance.recordError(e, s);
     }
   }
 
@@ -139,6 +141,7 @@ class JellyfinService extends ChangeNotifier {
     } catch (e, s) {
       print(e);
       print(s);
+      FirebaseCrashlytics.instance.recordError(e, s);
     }
   }
 
@@ -154,6 +157,7 @@ class JellyfinService extends ChangeNotifier {
     } catch (e, s) {
       print(e);
       print(s);
+      FirebaseCrashlytics.instance.recordError(e, s);
     }
   }
 
@@ -165,6 +169,7 @@ class JellyfinService extends ChangeNotifier {
     } catch (e, s) {
       print(e);
       print(s);
+      FirebaseCrashlytics.instance.recordError(e, s);
     }
   }
 
@@ -181,6 +186,7 @@ class JellyfinService extends ChangeNotifier {
     } catch (e, s) {
       print(e);
       print(s);
+      FirebaseCrashlytics.instance.recordError(e, s);
     }
   }
 
@@ -207,6 +213,7 @@ class JellyfinService extends ChangeNotifier {
     } catch (e, s) {
       print(e);
       print(s);
+      FirebaseCrashlytics.instance.recordError(e, s);
     }
   }
 
@@ -225,6 +232,7 @@ class JellyfinService extends ChangeNotifier {
     } catch (e, s) {
       print(e);
       print(s);
+      FirebaseCrashlytics.instance.recordError(e, s);
     }
   }
 
@@ -278,6 +286,7 @@ class JellyfinService extends ChangeNotifier {
     } catch (e, s) {
       print(e);
       print(s);
+      FirebaseCrashlytics.instance.recordError(e, s);
     }
   }
 
@@ -330,6 +339,7 @@ class JellyfinService extends ChangeNotifier {
     } catch (e, s) {
       print(e);
       print(s);
+      FirebaseCrashlytics.instance.recordError(e, s);
     }
   }
 
@@ -347,6 +357,7 @@ class JellyfinService extends ChangeNotifier {
     } catch (e, s) {
       print(e);
       print(s);
+      FirebaseCrashlytics.instance.recordError(e, s);
     }
   }
 
@@ -372,6 +383,7 @@ class JellyfinService extends ChangeNotifier {
     } catch (e, s) {
       print(e);
       print(s);
+      FirebaseCrashlytics.instance.recordError(e, s);
     }
   }
 
@@ -391,6 +403,7 @@ class JellyfinService extends ChangeNotifier {
     } catch (e, s) {
       print(e);
       print(s);
+      FirebaseCrashlytics.instance.recordError(e, s);
     }
   }
 }
