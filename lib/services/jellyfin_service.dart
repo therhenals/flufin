@@ -165,7 +165,11 @@ class JellyfinService extends ChangeNotifier {
     try {
       final resp = await _api.get('/Users/$_userId/Views');
       final Items data = Items.fromMap(resp.data);
-      views = data.items;
+      final items = data.items
+          .where((element) => (element.collectionType == 'movies' ||
+              element.collectionType == 'tvshows'))
+          .toList();
+      views = items;
     } catch (e, s) {
       print(e);
       print(s);
