@@ -6,6 +6,12 @@ This project is in beta phase, and it is possible that there are many bugs, I wo
 
 <a href='https://play.google.com/store/apps/details?id=com.therhenals.flufin'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' height="80"/></a>
 
+## Screenshots
+Home | Movie | Episode | Show
+-----|-------|---------|-----
+![Home](assets/home.png) | ![Movie](assets/movie.png) | ![Episode](assets/episode.png) | ![Show](assets/show.png)
+
+
 ## Planned features
 
 - Chromecast
