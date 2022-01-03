@@ -23,13 +23,19 @@ class ServerForm extends StatelessWidget {
             keyboardType: TextInputType.url,
             decoration: InputDecorations.globalInputDecoration(
               context: context,
-              hintText: '',
+              hintText: 'Eg: http://192.168.1.1:8096',
               labelText: t.serverAddress,
               prefixIcon: Icons.storage_rounded,
             ),
             onChanged: (value) => serverForm.address = value,
             validator: (value) {
-              return isURL(value, requireTld: true) ? null : 'Error';
+              return isURL(
+                value,
+                requireTld: true,
+                requireProtocol: true,
+              )
+                  ? null
+                  : 'Error';
             },
           ),
           const SizedBox(height: 30),
