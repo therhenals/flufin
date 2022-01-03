@@ -26,6 +26,7 @@ class LibraryScreen extends StatelessWidget {
               maxCrossAxisExtent: 200,
               crossAxisSpacing: 20,
               mainAxisSpacing: 20,
+              mainAxisExtent: 115,
             ),
             itemCount: jellyfin.views.length,
             itemBuilder: (_, int i) {
