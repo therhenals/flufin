@@ -51,7 +51,7 @@ class LoginForm extends StatelessWidget {
               prefixIcon: Icons.lock_rounded,
             ),
             onChanged: (value) => loginForm.password = value,
-            validator: (value) {
+            /* validator: (value) {
               const String message = 'Please enter password';
               if (!isAlphanumeric(value ?? '')) {
                 return message;
@@ -60,7 +60,7 @@ class LoginForm extends StatelessWidget {
               } else {
                 return null;
               }
-            },
+            }, */
           ),
           const SizedBox(height: 30),
           MaterialButton(
