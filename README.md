@@ -4,7 +4,7 @@ Flufin is a third-party Flutter application for Jellyfin
 
 This project is in beta phase, and it is possible that there are many bugs, I work on it in my spare time.
 
-[![google-play](https://jellyfin.org/images/store-icons/google-play.png)](https://play.google.com/store/apps/details?id=com.therhenals.flufin)
+<a href='https://play.google.com/store/apps/details?id=com.therhenals.flufin'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' height="80"/></a>
 
 ## Planned features
 
