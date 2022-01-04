@@ -1,3 +1,4 @@
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -88,11 +89,14 @@ class LoginForm extends StatelessWidget {
                         Provider.of<AuthService>(context, listen: false);
                     try {
                       await authService.login(
-                          loginForm.username, loginForm.password);
+                        loginForm.username,
+                        loginForm.password,
+                      );
                       Navigator.pushReplacementNamed(context, 'splash');
-                    } catch (e) {
+                    } catch (e, s) {
                       MessengerService.showSnakbar('Connection error');
                       loginForm.isLoading = false;
+                      FirebaseCrashlytics.instance.recordError(e, s);
                     }
                   },
           )
