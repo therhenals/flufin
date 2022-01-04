@@ -33,6 +33,11 @@ class SettingsScreen extends StatelessWidget {
             icon: Icons.logout_rounded,
             onTap: () async {
               final auth = Provider.of<AuthService>(context, listen: false);
+              final jellyfin = Provider.of<JellyfinService>(
+                context,
+                listen: false,
+              );
+              jellyfin.setInitial = false;
               await auth.deleteAll();
               Navigator.pushNamedAndRemoveUntil(
                 context,
@@ -52,7 +57,7 @@ class SettingsScreen extends StatelessWidget {
             icon: Icons.privacy_tip_rounded,
             onTap: () async {
               await launch(
-                'https://github.com/therhenals/flufin/blob/master/PRIVACY',
+                'https://github.com/therhenals/flufin/blob/main/PRIVACY',
               );
             },
           ),

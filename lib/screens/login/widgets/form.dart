@@ -1,6 +1,6 @@
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:validators/validators.dart';
 
 import 'package:flufin/providers/providers.dart';
 import 'package:flufin/services/services.dart';
@@ -30,9 +30,7 @@ class LoginForm extends StatelessWidget {
             onChanged: (value) => loginForm.username = value,
             validator: (value) {
               const String message = 'Please enter username';
-              if (!isAlphanumeric(value ?? '')) {
-                return message;
-              } else if (value!.isEmpty) {
+              if (value!.isEmpty) {
                 return message;
               } else {
                 return null;
@@ -91,11 +89,14 @@ class LoginForm extends StatelessWidget {
                         Provider.of<AuthService>(context, listen: false);
                     try {
                       await authService.login(
-                          loginForm.username, loginForm.password);
+                        loginForm.username,
+                        loginForm.password,
+                      );
                       Navigator.pushReplacementNamed(context, 'splash');
-                    } catch (e) {
+                    } catch (e, s) {
                       MessengerService.showSnakbar('Connection error');
                       loginForm.isLoading = false;
+                      FirebaseCrashlytics.instance.recordError(e, s);
                     }
                   },
           )
