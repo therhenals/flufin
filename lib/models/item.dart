@@ -421,7 +421,9 @@ class Item {
         tags: json["Tags"] != null
             ? List<String>.from(json["Tags"].map((x) => x))
             : null,
-        primaryImageAspectRatio: json["PrimaryImageAspectRatio"],
+        primaryImageAspectRatio: json["PrimaryImageAspectRatio"] != null
+            ? Utils.checkDouble(json["PrimaryImageAspectRatio"])
+            : null,
         artists: json["Artists"] != null
             ? List<String>.from(json["Artists"].map((x) => x))
             : null,
