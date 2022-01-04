@@ -33,6 +33,11 @@ class SettingsScreen extends StatelessWidget {
             icon: Icons.logout_rounded,
             onTap: () async {
               final auth = Provider.of<AuthService>(context, listen: false);
+              final jellyfin = Provider.of<JellyfinService>(
+                context,
+                listen: false,
+              );
+              jellyfin.setInitial = false;
               await auth.deleteAll();
               Navigator.pushNamedAndRemoveUntil(
                 context,
