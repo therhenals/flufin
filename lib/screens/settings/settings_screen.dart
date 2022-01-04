@@ -57,7 +57,7 @@ class SettingsScreen extends StatelessWidget {
             icon: Icons.privacy_tip_rounded,
             onTap: () async {
               await launch(
-                'https://github.com/therhenals/flufin/blob/master/PRIVACY',
+                'https://github.com/therhenals/flufin/blob/main/PRIVACY',
               );
             },
           ),
