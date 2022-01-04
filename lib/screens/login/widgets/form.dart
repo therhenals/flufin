@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:validators/validators.dart';
 
 import 'package:flufin/providers/providers.dart';
 import 'package:flufin/services/services.dart';
@@ -30,9 +29,7 @@ class LoginForm extends StatelessWidget {
             onChanged: (value) => loginForm.username = value,
             validator: (value) {
               const String message = 'Please enter username';
-              if (!isAlphanumeric(value ?? '')) {
-                return message;
-              } else if (value!.isEmpty) {
+              if (value!.isEmpty) {
                 return message;
               } else {
                 return null;
