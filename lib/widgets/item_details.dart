@@ -99,7 +99,8 @@ class _Body extends StatelessWidget {
                 width: width,
                 backdrop: backdrop,
               ),
-              if (year == true) _Year(item: item),
+              if (year == true && item.productionYear != null)
+                _Year(item: item),
             ],
           ),
           ItemTitle(
