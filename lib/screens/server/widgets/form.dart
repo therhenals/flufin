@@ -1,3 +1,4 @@
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flufin/i18n/strings.g.dart';
 import 'package:flufin/providers/providers.dart';
 import 'package:flufin/services/services.dart';
@@ -63,15 +64,18 @@ class ServerForm extends StatelessWidget {
                     if (!serverForm.isValidForm()) return;
                     serverForm.isLoading = true;
 
-                    final server =
-                        Provider.of<ServerService>(context, listen: false);
+                    final server = Provider.of<ServerService>(
+                      context,
+                      listen: false,
+                    );
                     try {
                       await server.connect(serverForm.address);
                       await server.saveServer(serverForm.address);
                       Navigator.pushReplacementNamed(context, 'login');
-                    } catch (e) {
+                    } catch (e, s) {
                       MessengerService.showSnakbar('Connection error');
                       serverForm.isLoading = false;
+                      FirebaseCrashlytics.instance.recordError(e, s);
                     }
                   },
           )
