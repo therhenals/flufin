@@ -40,6 +40,11 @@ class ThemeStyles {
         selectedItemColor: primaryColorDark,
         backgroundColor: backgroundDark,
       ),
+      navigationRailTheme: const NavigationRailThemeData(
+        backgroundColor: backgroundDark,
+        elevation: 10.0,
+        labelType: NavigationRailLabelType.all,
+      ),
       bottomSheetTheme: const BottomSheetThemeData(
         backgroundColor: backgroundDark,
         shape: RoundedRectangleBorder(
@@ -128,6 +133,10 @@ class ThemeStyles {
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         selectedItemColor: primaryColor,
         backgroundColor: background,
+      ),
+      navigationRailTheme: const NavigationRailThemeData(
+        backgroundColor: background,
+        elevation: 10.0,
       ),
       bottomSheetTheme: const BottomSheetThemeData(
         backgroundColor: background,

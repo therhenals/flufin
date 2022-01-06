@@ -51,6 +51,7 @@ dependencies:
   nil: ^1.1.1
   firebase_core: ^1.10.6
   firebase_crashlytics: ^2.4.4
+  layout: ^1.0.2
 
 dev_dependencies:
   flutter_test:

@@ -5,6 +5,7 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:layout/layout.dart';
 import 'package:provider/provider.dart';
 
 import 'package:flufin/i18n/strings.g.dart';
@@ -65,29 +66,31 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flufin',
-      themeMode: ThemeMode.system,
-      locale: TranslationProvider.of(context).flutterLocale,
-      supportedLocales: LocaleSettings.supportedLocales,
-      localizationsDelegates: GlobalMaterialLocalizations.delegates,
-      initialRoute: 'splash',
-      routes: {
-        'splash': (_) => const SplashScreen(),
-        'tabs': (_) => const TabsScreen(),
-        'player': (_) => const PlayerScreen(),
-        'login': (_) => const LoginScreen(),
-        'server': (_) => const ServerScreen(),
-        'collection': (_) => const CollectionScreen(),
-        'details': (_) => const DetailsScreen(),
-        'settings': (_) => const SettingsScreen(),
-        'season': (_) => const SeasonScreen(),
-        'appInformation': (_) => const AppInformationScreen(),
-      },
-      scaffoldMessengerKey: MessengerService.messengerKey,
-      darkTheme: ThemeStyles.dark(),
-      theme: ThemeStyles.light(),
+    return Layout(
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flufin',
+        themeMode: ThemeMode.system,
+        locale: TranslationProvider.of(context).flutterLocale,
+        supportedLocales: LocaleSettings.supportedLocales,
+        localizationsDelegates: GlobalMaterialLocalizations.delegates,
+        initialRoute: 'splash',
+        routes: {
+          'splash': (_) => const SplashScreen(),
+          'tabs': (_) => const TabsScreen(),
+          'player': (_) => const PlayerScreen(),
+          'login': (_) => const LoginScreen(),
+          'server': (_) => const ServerScreen(),
+          'collection': (_) => const CollectionScreen(),
+          'details': (_) => const DetailsScreen(),
+          'settings': (_) => const SettingsScreen(),
+          'season': (_) => const SeasonScreen(),
+          'appInformation': (_) => const AppInformationScreen(),
+        },
+        scaffoldMessengerKey: MessengerService.messengerKey,
+        darkTheme: ThemeStyles.dark(),
+        theme: ThemeStyles.light(),
+      ),
     );
   }
 }

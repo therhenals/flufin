@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:layout/layout.dart';
 import 'package:provider/provider.dart';
 
 import 'package:flufin/providers/providers.dart';
@@ -43,8 +44,17 @@ class _TabsScreenState extends State<TabsScreen> {
           )
         ],
       ),
-      body: const _TabsPageBody(),
-      bottomNavigationBar: const CustomBottomNavigationBar(),
+      body: Row(
+        children: [
+          if (context.layout.breakpoint > LayoutBreakpoint.sm) ...[
+            const CustomNavigationRail(),
+          ],
+          const Expanded(child: _TabsPageBody()),
+        ],
+      ),
+      bottomNavigationBar: context.layout.breakpoint < LayoutBreakpoint.md
+          ? const CustomBottomNavigationBar()
+          : null,
     );
   }
 }
