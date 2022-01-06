@@ -28,13 +28,13 @@ class _TabsScreenState extends State<TabsScreen> {
       appBar: AppBar(
         title: const Text('Flufin'),
         centerTitle: true,
-        /* leading: IconButton(
+        leading: IconButton(
           icon: const Icon(Icons.search),
           onPressed: () => showSearch(
             context: context,
             delegate: ItemSearchDelegate(),
           ),
-        ), */
+        ),
         actions: [
           IconButton(
             onPressed: () {

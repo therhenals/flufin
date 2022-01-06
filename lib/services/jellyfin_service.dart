@@ -195,11 +195,17 @@ class JellyfinService extends ChangeNotifier {
   }
 
   Future<List<Item>?> getItems({
-    required String parendId,
-    required String includeItemTypes,
+    String? parendId,
+    String? includeItemTypes,
     String sortBy = 'PremiereDate,SortName,ProductionYear',
     String sortOrder = 'Ascending',
     bool recursive = true,
+    String? searchTerm,
+    bool? includePeople,
+    bool? includeStudios,
+    bool? includeArtists,
+    bool? includeGenres,
+    bool? includeMedia,
   }) async {
     collection = [];
     try {
@@ -209,11 +215,18 @@ class JellyfinService extends ChangeNotifier {
         'SortBy': sortBy,
         'SortOrder': sortOrder,
         'IncludeItemTypes': includeItemTypes,
-        'Recursive': recursive.toString()
+        'Recursive': recursive.toString(),
+        'SearchTerm': searchTerm,
+        'IncludePeople': includePeople,
+        'IncludeStudios': includeStudios,
+        'IncludeArtists': includeArtists,
+        'IncludeGenres': includeGenres,
+        'IncludeMedia': includeMedia,
       });
       final data = Items.fromMap(resp.data);
       collection = data.items;
       notifyListeners();
+      return data.items;
     } catch (e, s) {
       print(e);
       print(s);
