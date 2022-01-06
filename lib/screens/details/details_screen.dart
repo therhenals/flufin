@@ -63,7 +63,7 @@ class DetailsScreen extends StatelessWidget {
                         item: item,
                       ),
                       const SizedBox(height: 15),
-                      if (item.genres != null) ...[
+                      if (item.genres != null && item.genres!.isNotEmpty) ...[
                         Genres(genres: item.genres!),
                         const SizedBox(height: 10),
                       ],
