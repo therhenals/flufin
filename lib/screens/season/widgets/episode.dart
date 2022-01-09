@@ -44,7 +44,8 @@ class Episode extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  '${episode.indexNumber!}. ' + (episode.name ?? 'No name'),
+                  '${episode.indexNumber ?? 'No #'}. ' +
+                      (episode.name ?? 'No name'),
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 15,
